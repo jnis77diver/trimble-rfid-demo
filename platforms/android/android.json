@@ -1,0 +1,101 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"trmbmcsrfid\"><param name=\"android-package\" value=\"com.trimble.mcs.cordova.plugin.TrmbMcsRfid\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<uses-library android:name=\"com.trimble.mcs\" android:required=\"true\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"com.trimble.mcs.rfid.ACCESS_RFID\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.trimble.mcs.cordova.rfidsample"
+        },
+        "com.trimble.mcs.cordova.plugin.rfid": {
+            "PACKAGE_NAME": "com.trimble.mcs.cordova.rfidsample"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+            "id": "cordova-plugin-whitelist.whitelist",
+            "pluginId": "cordova-plugin-whitelist",
+            "runs": true
+        },
+        {
+            "file": "plugins/com.trimble.mcs.cordova.plugin.rfid/www/trmbmcsrfid.js",
+            "id": "com.trimble.mcs.cordova.plugin.rfid.trmbmcsrfid",
+            "pluginId": "com.trimble.mcs.cordova.plugin.rfid",
+            "clobbers": [
+                "trmbmcs.rfid"
+            ]
+        },
+        {
+            "file": "plugins/com.trimble.mcs.cordova.plugin.rfid/www/trmbmcsrfidinfo.js",
+            "id": "com.trimble.mcs.cordova.plugin.rfid.trmbmcsrfidinfo",
+            "pluginId": "com.trimble.mcs.cordova.plugin.rfid",
+            "clobbers": [
+                "trmbmcs.rfid.info"
+            ]
+        },
+        {
+            "file": "plugins/com.trimble.mcs.cordova.plugin.rfid/www/trmbmcsrfidparams.js",
+            "id": "com.trimble.mcs.cordova.plugin.rfid.trmbmcsrfidparams",
+            "pluginId": "com.trimble.mcs.cordova.plugin.rfid",
+            "clobbers": [
+                "trmbmcs.rfid.params"
+            ]
+        },
+        {
+            "file": "plugins/com.trimble.mcs.cordova.plugin.rfid/www/trmbmcsrfidtag.js",
+            "id": "com.trimble.mcs.cordova.plugin.rfid.trmbmcsrfidtag",
+            "pluginId": "com.trimble.mcs.cordova.plugin.rfid",
+            "clobbers": [
+                "trmbmcs.rfid.tag"
+            ]
+        },
+        {
+            "file": "plugins/com.trimble.mcs.cordova.plugin.rfid/www/trmbmcsrfidaei.js",
+            "id": "com.trimble.mcs.cordova.plugin.rfid.trmbmcsrfidaei",
+            "pluginId": "com.trimble.mcs.cordova.plugin.rfid",
+            "clobbers": [
+                "trmbmcs.rfid.aei"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.1",
+        "com.trimble.mcs.cordova.plugin.rfid": "1.0.0"
+    }
+}

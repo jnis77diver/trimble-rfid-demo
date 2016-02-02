@@ -1,0 +1,18 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.trimble.mcs.cordova.plugin.rfid": {
+        "source": {
+            "type": "local",
+            "path": "/Users/Jonah/Documents/JonahDocs/Work_Projects/Surge/BeeKeeping/Trimble_device/rfid-plugin"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

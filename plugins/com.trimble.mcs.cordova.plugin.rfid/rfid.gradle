@@ -1,0 +1,6 @@
+android {
+    dependencies {
+        provided files("../../plugins/com.trimble.mcs.cordova.plugin.rfid/src/android/libs/com.trimble.mcs.jar")
+    }
+}
+
